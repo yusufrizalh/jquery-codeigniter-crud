@@ -8,7 +8,7 @@ function doSearchCustomer(){
 function newCustomer() {
 	$('#dlgCustomer').dialog('open').dialog('setTitle','Add Vendor Contacts');
 	$('#fmCustomer').form('clear');
-	url = '/Welcome/saveCustomer';
+	url = 'Welcome/saveCustomer';
 	ttl = "new";
 }
 
@@ -65,7 +65,7 @@ function destroyCustomer() {
 	if (row){
 		$.messager.confirm('Confirm','Are you sure you want to delete this Vendor..? All data under this Vendor will be disappear',function(r){
 			if (r){
-				$.post('/Welcome/destroyCustomer',{id:row.customerNumber},function(result){
+				$.post('Welcome/destroyCustomer',{id:row.customerNumber},function(result){
 					if (result.success){
 						$('#dgCustomers').datagrid('reload');	// reload the Vendor data
 					} else {
