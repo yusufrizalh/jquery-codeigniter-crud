@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 13, 2017 at 02:03 PM
--- Server version: 5.7.19
--- PHP Version: 7.1.7
+-- Host: 127.0.0.1
+-- Generation Time: Oct 02, 2019 at 09:23 AM
+-- Server version: 10.4.7-MariaDB
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_ci_easyui`
+-- Database: `ajaxcrud_demos`
 --
 
 -- --------------------------------------------------------
@@ -166,7 +168,8 @@ INSERT INTO `customers` (`customerNumber`, `customerName`, `contactLastName`, `c
 (487, 'Signal Collectibles Ltd.', 'Taylor', 'Sue', '4155554312', '2793 Furth Circle', NULL, 'Brisbane', 'CA', '94217', 'USA'),
 (489, 'Double Decker Gift Stores, Ltd', 'Smith', 'Thomas ', '(171) 555-7555', '120 Hanover Sq.', NULL, 'London', NULL, 'WA1 1DP', 'UK'),
 (495, 'Diecast Collectables', 'Franco', 'Valarie', '6175552555', '6251 Ingle Ln.', NULL, 'Boston', 'MA', '51003', 'USA'),
-(496, 'Kelly\'s Gift Shop', 'Snowden', 'Tony', '+64 9 5555500', 'Arenales 1938 3\'A\'', NULL, 'Auckland  ', NULL, NULL, 'New Zealand');
+(496, 'Kelly\'s Gift Shop', 'Snowden', 'Tony', '+64 9 5555500', 'Arenales 1938 3\'A\'', NULL, 'Auckland  ', NULL, NULL, 'New Zealand'),
+(498, 'PT Inixindo', 'Rizal', 'Yusuf', '081553312883', 'Gedung Kompas Gramedia', 'Jl. Raya Jemursari No. 64 ', 'Surabaya', 'East Java', '', 'Indonesia');
 
 --
 -- Indexes for dumped tables
@@ -186,7 +189,9 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customerNumber` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=498;
+  MODIFY `customerNumber` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=499;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>CodeIgniter with JQuery Easyui</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/easyui/themes/metro/easyui.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/easyui/themes/default/easyui.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/easyui/themes/icon.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>">
     <script type="text/javascript" src="<?php echo base_url('assets/easyui/jquery.min.js') ?>"></script>
@@ -11,10 +11,13 @@
     <script type="text/javascript" src="<?php echo base_url('assets/js/script.js') ?>"></script>
 </head>
 <body>
-
 <div id="container" class="easyui-layout" fit="true">
     <div region="center">
-        <table id="dgCustomers" toolbar="#toolbarCustomer" class="easyui-datagrid" fit="true" singleSelect="true" fitColumns="true" rowNumbers="false" pagination="true" url="<?= site_url('welcome/getcustomers') ?>" pageSize="50" pageList="[25,50,75,100,125,150,200]" nowrap="false">
+        <table id="dgCustomers" toolbar="#toolbarCustomer" 
+            class="easyui-datagrid" fit="false" singleSelect="true" fitColumns="true" 
+                style="width: 100%; height: 600px"
+                rowNumbers="true" pagination="true" url="<?= site_url('welcome/getcustomers') ?>" 
+                pageSize="50" pageList="[10,20,30,40,50,60,70]" nowrap="true">
             <thead>
                 <tr>
                     <th field="customerNumber" width="80">Customer Number</th>
